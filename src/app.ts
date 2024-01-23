@@ -6,7 +6,10 @@ import { ServiceFactory, ClientType } from "./services/order-services";
 
 // here are our observers. We can extend this with more observers as
 // our app evolves.
-const observers = [ClientType.customer, ClientType.doorDash];
+const observers = [
+  { name: "Customer Adam", type: ClientType.customer },
+  { name: "DoorDash", type: ClientType.doorDash },
+];
 
 // create the subject (We are creating a new pizza order!).
 const pizzaOrderStatusPublisher = new PizzaOrderSubject();
@@ -14,9 +17,9 @@ const pizzaOrderStatusPublisher = new PizzaOrderSubject();
 // create the observers.
 observers.forEach((observer) => {
   new PizzaOrderObserver(
-    `Observer ${observer}`,
+    `Observer ${observer.name}`,
     pizzaOrderStatusPublisher,
-    ServiceFactory.createService(observer)
+    ServiceFactory.createService(observer.type)
   );
 });
 

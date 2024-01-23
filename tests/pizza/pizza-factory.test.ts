@@ -19,3 +19,26 @@ describe("Pizza-Factory- Create Pizza", () => {
     expect(pizza.toppings).to.include("pepperoni");
   });
 });
+
+// lame test for stub methods.
+describe("PizzaFactory- Created Pizza Send Order", () => {
+  it("should call the send function for a created Taven pizza type", () => {
+    const pizza = PizzaFactory.createPizza("Tavern", ["cheese", "pepperoni"]);
+
+    Sinon.spy(pizza, "preparePizza");
+
+    pizza.preparePizza("Tavern Pizza", true);
+
+    expect(pizza.preparePizza).to.have.been.calledOnce;
+  });
+
+  it("should call the send function for a created DeepDish pizza type", () => {
+    const pizza = PizzaFactory.createPizza("DeepDish", ["cheese", "pepperoni"]);
+
+    Sinon.spy(pizza, "preparePizza");
+
+    pizza.preparePizza("DeepDish Pizza", true);
+
+    expect(pizza.preparePizza).to.have.been.calledOnce;
+  });
+});
