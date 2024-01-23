@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import Sinon from "sinon";
 import sinonChai from "sinon-chai";
-import { PizzaFactory } from "../../src/pizza/pizza-factory";
+import { PizzaFactory } from "../../src/food/pizza/pizza-factory";
 var chai = require("chai");
 chai.use(sinonChai);
 
