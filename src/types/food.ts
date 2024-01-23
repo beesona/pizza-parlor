@@ -1,12 +1,12 @@
 enum FoodGroup {
-  Fruit = "Fruit",
-  Vegetable = "Vegetable",
-  Protein = "Protein",
-  Dairy = "Dairy",
-  Grain = "Grain",
-  Fat = "Fat",
-  Sweet = "Sweet",
-  Other = "Other",
+  Fruit = 'Fruit',
+  Vegetable = 'Vegetable',
+  Protein = 'Protein',
+  Dairy = 'Dairy',
+  Grain = 'Grain',
+  Fat = 'Fat',
+  Sweet = 'Sweet',
+  Other = 'Other',
 }
 
 interface IFood {

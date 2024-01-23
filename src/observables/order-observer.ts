@@ -3,7 +3,7 @@ import {
   IPizzaOrder,
   IPizzaOrderObserver,
   IPizzaOrderSubject,
-} from "../types/pizza";
+} from '../types/pizza';
 
 // concrete implementation of the observer.
 class PizzaOrderObserver implements IPizzaOrderObserver {

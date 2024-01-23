@@ -1,23 +1,23 @@
-import { PizzaFactory } from "../food/pizza/pizza-factory";
+import { PizzaFactory } from '../food/pizza/pizza-factory';
 import {
   IPizzaOrder,
   IPizzaOrderObserver,
   IPizzaOrderSubject,
-} from "../types/pizza";
+} from '../types/pizza';
 
 // concrete implementation of the subject.
 class PizzaOrderSubject implements IPizzaOrderSubject {
   private observers: IPizzaOrderObserver[] = [];
   private pizzaState: IPizzaOrder = {
-    pizza: PizzaFactory.createPizza("DeepDish", ["cheese", "pepperoni"]),
+    pizza: PizzaFactory.createPizza('DeepDish', ['cheese', 'pepperoni']),
     orderDate: new Date(),
-    status: "Ordered",
+    status: 'Ordered',
   };
 
-  set orderStatus(status: "Ordered" | "Prepared" | "Delivered") {
+  set orderStatus(status: 'Ordered' | 'Prepared' | 'Delivered') {
     this.pizzaState.status = status;
     this.pizzaState.deliveryDate =
-      status === "Delivered" ? new Date() : undefined;
+      status === 'Delivered' ? new Date() : undefined;
     this.notifyObservers(this.pizzaState);
   }
 

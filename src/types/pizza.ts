@@ -4,18 +4,18 @@ interface IPizza {
 }
 
 interface IDeepDishPizza extends IPizza {
-  doughType: "Seminole" | "Wheat";
+  doughType: 'Seminole' | 'Wheat';
 }
 
 interface ITavernPizza extends IPizza {
-  squareCutSize: "Small" | "Medium" | "Large";
+  squareCutSize: 'Small' | 'Medium' | 'Large';
 }
 
 interface IPizzaOrder {
   pizza: IPizza;
   orderDate: Date;
   deliveryDate?: Date;
-  status: "Ordered" | "Prepared" | "Delivered";
+  status: 'Ordered' | 'Prepared' | 'Delivered';
 }
 
 interface IPizzaOrderObserver {

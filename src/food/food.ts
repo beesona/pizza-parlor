@@ -1,6 +1,6 @@
-import { FoodGroup, IFood } from "../types/food";
+import type { FoodGroup, IFood } from '../types/food';
 
-export abstract class Food implements IFood {
+abstract class Food implements IFood {
   constructor(
     public name: string,
     public foodGroup: FoodGroup,
@@ -13,3 +13,5 @@ export abstract class Food implements IFood {
     return this.calories;
   }
 }
+
+export { Food };

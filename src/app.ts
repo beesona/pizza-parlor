@@ -1,14 +1,14 @@
-import { PizzaOrderSubject } from "./observables/order-subject";
-import { PizzaOrderObserver } from "./observables/order-observer";
-import { ServiceFactory, ClientType } from "./services/order-services";
+import { PizzaOrderSubject } from './observables/order-subject';
+import { PizzaOrderObserver } from './observables/order-observer';
+import { ServiceFactory, ClientType } from './services/order-services';
 
 // client code:
 
 // here are our observers. We can extend this with more observers as
 // our app evolves.
 const observers = [
-  { name: "Customer Adam", type: ClientType.customer },
-  { name: "DoorDash", type: ClientType.doorDash },
+  { name: 'Customer Adam', type: ClientType.customer },
+  { name: 'DoorDash', type: ClientType.doorDash },
 ];
 
 // create the subject (We are creating a new pizza order!).
@@ -24,7 +24,7 @@ observers.forEach((observer) => {
 });
 
 // change the state of the subject.
-pizzaOrderStatusPublisher.orderStatus = "Prepared";
+pizzaOrderStatusPublisher.orderStatus = 'Prepared';
 
 // do it again!
-pizzaOrderStatusPublisher.orderStatus = "Delivered";
+pizzaOrderStatusPublisher.orderStatus = 'Delivered';
