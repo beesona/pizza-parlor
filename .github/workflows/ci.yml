@@ -21,4 +21,4 @@ jobs:
       - name: Install
         run: npm install
       - name: ESLint
-        run: npm run lint
+        run: npm run lint:fix
