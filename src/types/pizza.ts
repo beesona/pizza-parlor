@@ -34,7 +34,7 @@ interface IOrderServiceAdapter {
 }
 
 interface IDoorDashOrder {
-  item: any;
+  item: IPizza; // Extend this later.
   orderDate: Date;
   pickupLocation: string;
 }

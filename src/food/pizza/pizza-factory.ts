@@ -12,7 +12,12 @@ class DeepDishPizza extends Food implements IDeepDishPizza {
     super('Pizza', FoodGroup.Grain, [...toppings, `${doughType} Flour`], 3000);
   }
 
-  preparePizza(name: string, includeDate: boolean = false): void {}
+  preparePizza(name: string, includeDate: boolean = false): void {
+    console.log(`Preparing ${name} pizza...`);
+    if (includeDate) {
+      console.log(`Order date: ${new Date()}`);
+    }
+  }
 }
 
 class TavernPizza extends Food implements ITavernPizza {
@@ -23,7 +28,9 @@ class TavernPizza extends Food implements ITavernPizza {
     super('Pizza', FoodGroup.Grain, [...toppings, 'Flour'], 3000);
   }
 
-  preparePizza(name: string): void {}
+  preparePizza(name: string): void {
+    console.log(`Preparing ${name} pizza...`);
+  }
 }
 
 class PizzaFactory {
