@@ -36,12 +36,12 @@ class TavernPizza extends Food implements ITavernPizza {
 class PizzaFactory {
   static createPizza(type: 'DeepDish' | 'Tavern', toppings: string[]): IPizza {
     switch (type) {
-      case 'DeepDish':
-        return new DeepDishPizza(toppings, 'Seminole');
-      case 'Tavern':
-        return new TavernPizza(toppings, 'Large');
-      default:
-        throw new Error('Invalid pizza type...');
+    case 'DeepDish':
+      return new DeepDishPizza(toppings, 'Seminole');
+    case 'Tavern':
+      return new TavernPizza(toppings, 'Large');
+    default:
+      throw new Error('Invalid pizza type...');
     }
   }
 }
